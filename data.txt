@@ -1,0 +1,8 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyC5yOboohSQOf6mWwvSzgUYpkEbvqqlDhY",
+  authDomain: "elajar-arab-mts.firebaseapp.com",
+  projectId: "elajar-arab-mts",
+  storageBucket: "elajar-arab-mts.firebasestorage.app",
+  messagingSenderId: "100369006179",
+  appId: "1:100369006179:web:a5afb40ea483e20c0e4256"
+};

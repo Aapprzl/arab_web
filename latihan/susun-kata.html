@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan Susun Kata - Bahasa Arab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Tambahkan ini DULU -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+<!-- Baru setelah itu, panggil file inisialisasi Firebase -->
+<script src="../firebase/firebase_init.js"></script>
+
+<!-- File logger yang butuh Firebase -->
+<script src="../js/latihan_logger.js"></script>
+
+
+  <style>
+    .draggable {
+      cursor: grab;
+      touch-action: none;
+    }
+    .dropzone {
+      min-height: 50px;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+  </style>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+<header class="bg-green-600 text-white py-4 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+    <h1 class="text-xl sm:text-2xl font-bold">BelajarArab.ID</h1>
+    <button id="nav-toggle" class="sm:hidden text-white focus:outline-none">
+      ☰
+    </button>
+    <nav id="nav-menu" class="hidden sm:flex sm:space-x-4 text-sm sm:text-base flex-col sm:flex-row bg-green-600 sm:bg-transparent mt-4 sm:mt-0 sm:items-center sm:static absolute top-full left-0 w-full sm:w-auto z-50 sm:z-auto">
+      <a href="../index.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Beranda</a>
+      <a href="../materi.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Materi</a>
+      <a href="../komik/komik.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Komik</a>
+      <a href="../video.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Video</a>
+      <a href="../kontak.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+  <br />
+
+  <div class="max-w-2xl mx-auto px-4">
+    <h1 class="text-2xl font-bold text-center mb-6">✍️ Latihan Susun Kata - Bahasa Arab</h1>
+    <p class="mb-4 text-center">Susun kata-kata berikut menjadi kalimat yang benar</p>
+
+    <div id="word-bank" class="flex flex-wrap gap-4 justify-center mb-6">
+      <div draggable="true" class="draggable bg-green-200 px-4 py-2 rounded shadow text-xl">أَذْهَبُ</div>
+      <div draggable="true" class="draggable bg-green-200 px-4 py-2 rounded shadow text-xl">إِلَى</div>
+      <div draggable="true" class="draggable bg-green-200 px-4 py-2 rounded shadow text-xl">المَدْرَسَةِ</div>
+    </div>
+
+    <div id="answer-zone" class="dropzone flex flex-wrap gap-4 justify-center mb-4"></div>
+
+    <div class="text-center mt-6">
+      <label for="studentName" class="block mb-2 text-lg">Nama Anda:</label>
+      <input type="text" id="studentName" class="border rounded px-3 py-1 mb-4 w-64 text-center" placeholder="Masukkan nama anda">
+
+      <div class="space-x-4">
+        <button id="periksaBtn" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">✔️ Periksa Jawaban</button>
+        <button id="ulangBtn" class="bg-gray-500 text-white px-6 py-2 rounded hover:bg-gray-600">🔄 Ulangi</button>
+      </div>
+    </div>
+
+    <div id="feedback" class="text-center mt-6 text-xl font-semibold"></div>
+  </div>
+
+  <!-- Script utama -->
+  <script>
+    const correctAnswer = ['أَذْهَبُ', 'إِلَى', 'المَدْرَسَةِ'];
+    const dropzone = document.getElementById('answer-zone');
+    const feedback = document.getElementById('feedback');
+    const namaInput = document.getElementById('studentName');
+
+    // Fungsi drag
+    function buatDraggable(elem) {
+      elem.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', e.target.innerText);
+      });
+    }
+
+    document.querySelectorAll('.draggable').forEach(buatDraggable);
+
+    dropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+    });
+
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      const word = e.dataTransfer.getData('text/plain');
+      const span = document.createElement('div');
+      span.innerText = word;
+      span.className = 'bg-blue-200 px-4 py-2 rounded shadow text-xl draggable';
+      span.setAttribute('draggable', 'true');
+      buatDraggable(span);
+      dropzone.appendChild(span);
+    });
+
+    document.getElementById('periksaBtn').addEventListener('click', () => {
+      const nama = namaInput.value.trim();
+      if (!nama) {
+        alert("Masukkan nama terlebih dahulu.");
+        return;
+      }
+
+      const userAnswer = Array.from(dropzone.children).map(el => el.innerText.trim());
+      if (JSON.stringify(userAnswer) === JSON.stringify(correctAnswer)) {
+        feedback.innerText = '✅ Jawaban benar!';
+        feedback.classList.add('text-green-600');
+        feedback.classList.remove('text-red-600');
+
+        // Kirim hasil ke Firebase
+        if (typeof kirimHasil === 'function') {
+          kirimHasil(nama, "susun_kata");
+        }
+
+        alert("Jawaban benar! Data telah dikirim.");
+      } else {
+        feedback.innerText = '❌ Jawaban belum tepat. Coba lagi!';
+        feedback.classList.add('text-red-600');
+        feedback.classList.remove('text-green-600');
+        alert("Jawaban salah. Silakan coba lagi.");
+      }
+    });
+
+    document.getElementById('ulangBtn').addEventListener('click', () => {
+      dropzone.innerHTML = '';
+      feedback.innerText = '';
+    });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Materi: Rumah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Cairo', sans-serif; }
+  </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold text-blue-600 mb-6 text-center">🏠 Kosakata Tema Rumah</h1>
+
+    <!-- Kosakata -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Contoh Kosakata Rumah -->
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>بَيْتٌ</strong> – Rumah</p>
+          <button onclick="playAudio('rumah')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="rumah" src="../audio/rumah.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>غُرْفَةٌ</strong> – Ruangan</p>
+          <button onclick="playAudio('ruangan')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="ruangan" src="../audio/ruangan.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>مَطْبَخٌ</strong> – Dapur</p>
+          <button onclick="playAudio('dapur')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="dapur" src="../audio/dapur.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>غُرْفَةُ النَّوْمِ</strong> – Kamar tidur</p>
+          <button onclick="playAudio('kamar_tidur')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="kamar_tidur" src="../audio/kamar_tidur.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>حَمَّامٌ</strong> – Kamar mandi</p>
+          <button onclick="playAudio('kamar_mandi')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="kamar_mandi" src="../audio/kamar_mandi.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>مِرْوَحَةٌ</strong> – Kipas angin</p>
+          <button onclick="playAudio('kipas')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="kipas" src="../audio/kipas.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>سَرِيرٌ</strong> – Tempat tidur</p>
+          <button onclick="playAudio('tempat_tidur')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="tempat_tidur" src="../audio/tempat_tidur.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>كُرْسِيٌّ</strong> – Kursi</p>
+          <button onclick="playAudio('kursi')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="kursi" src="../audio/kursi.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>طَاوِلَةٌ</strong> – Meja</p>
+          <button onclick="playAudio('meja')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="meja" src="../audio/meja.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>بَابٌ</strong> – Pintu</p>
+          <button onclick="playAudio('pintu')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="pintu" src="../audio/pintu.mp3"></audio>
+      </div>
+      <!-- Tambahkan hingga 20 sesuai kebutuhan -->
+    </div>
+
+    <!-- Contoh Kalimat -->
+    <div class="mt-10">
+      <h2 class="text-xl font-bold text-blue-600 mb-4">📝 Contoh Kalimat</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>هَذَا بَيْتِي. – Ini rumahku.</li>
+        <li>الْمَطْبَخُ كَبِيرٌ. – Dapurnya besar.</li>
+        <li>فِي غُرْفَةِ النَّوْمِ سَرِيرٌ وَخِزَانَةٌ. – Di kamar tidur ada tempat tidur dan lemari.</li>
+        <li>الْحَمَّامُ نَظِيفٌ. – Kamar mandi bersih.</li>
+        <li>هَلْ عِنْدَكَ مِرْوَحَةٌ؟ – Apakah kamu punya kipas angin?</li>
+        <li>الطَّاوِلَةُ فِي الْمَطْبَخِ. – Meja ada di dapur.</li>
+        <li>أُغْلِقُ الْبَابَ. – Saya menutup pintu.</li>
+        <li>هَذِهِ غُرْفَةُ أُخْتِي. – Ini kamar adik perempuanku.</li>
+        <li>الْكُرْسِيُّ تَحْتَ الطَّاوِلَةِ. – Kursinya di bawah meja.</li>
+        <li>فِي بَيْتِنَا حَدِيقَةٌ جَمِيلَةٌ. – Di rumah kami ada taman yang indah.</li>
+      </ul>
+    </div>
+
+    <!-- Dialog -->
+    <div class="mt-10">
+      <h2 class="text-xl font-bold text-blue-600 mb-4">💬 Dialog Tema Rumah</h2>
+      <div class="bg-white rounded-lg p-6 shadow space-y-3 leading-relaxed">
+        <p><strong>خَالِدٌ:</strong> أَيْنَ تَسْكُنُ يَا عَلِيّ؟</p>
+        <p><strong>عَلِيٌّ:</strong> أَسْكُنُ فِي بَيْتٍ جَمِيلٍ فِي الْمَدِينَةِ.</p>
+        <p><strong>خَالِدٌ:</strong> كَمْ غُرْفَةً فِي بَيْتِكُمْ؟</p>
+        <p><strong>عَلِيٌّ:</strong> فِيهِ خَمْسُ غُرَفٍ: غُرْفَةُ النَّوْمِ، غُرْفَةُ الْجُلُوسِ، وَمَطْبَخٌ، وَحَمَّامٌ، وَغُرْفَةُ الضُّيُوفِ.</p>
+        <p><strong>خَالِدٌ:</strong> هَلْ لَكُمْ حَدِيقَةٌ؟</p>
+        <p><strong>عَلِيٌّ:</strong> نَعَمْ، وَفِيهَا أَزْهَارٌ جَمِيلَةٌ.</p>
+      </div>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="flex justify-between mt-10">
+      <a href="../materi.html" class="text-blue-600 hover:underline">⬅️ Kembali ke Materi</a>
+      <a href="../latihan/susun_kata_rumah.html" class="text-green-600 hover:underline">🚀 Latihan Susun Kata</a>
+    </div>
+  </div>
+
+  <script>
+    function playAudio(id) {
+      const audio = document.getElementById(id);
+      if (audio) audio.play();
+    }
+  </script>
+</body>
+</html>

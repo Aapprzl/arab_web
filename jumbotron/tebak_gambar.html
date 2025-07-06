@@ -1,0 +1,135 @@
+<!-- tebak_gambar.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎮 Tebak Gambar - BelajarArab.ID</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .fade-in { animation: fadeIn 0.5s ease-in-out; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+        <!-- Navigasi -->
+<header class="bg-green-700 text-white py-4 shadow sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+    <h1 class="text-xl font-bold">BelajarArab.ID</h1>
+    <nav class="space-x-4 text-sm sm:text-base">
+      <a href="../index.html" class="hover:underline">🏠 Beranda</a>
+      <a href="../materi.html" class="hover:underline">📚 Materi</a>
+      <a href="../latihan.html" class="hover:underline">🧠 Latihan</a>
+    </nav>
+  </div>
+</header>
+
+  <div class="max-w-3xl mx-auto px-4 py-8">
+
+
+    <h1 class="text-3xl font-bold text-center text-green-700 mb-6">🖼️ Tebak Gambar Kosakata</h1>
+
+    <!-- Form Nama -->
+    <div class="mb-6 text-center">
+      <label for="nama" class="block mb-2 text-lg">Masukkan Nama Anda:</label>
+      <input type="text" id="nama" class="border rounded px-4 py-2 text-center w-64" placeholder="Nama Anda...">
+    </div>
+
+    <!-- Game Area -->
+    <div id="gameArea" class="bg-white p-6 rounded-xl shadow-md text-center">
+      <div id="gambarContainer" class="mb-6">
+        <img id="gambar" src="" alt="Gambar" class="mx-auto h-48 rounded shadow fade-in">
+      </div>
+      <div id="pilihan" class="grid grid-cols-2 gap-4 max-w-md mx-auto"></div>
+      <p id="feedback" class="text-xl font-semibold mt-6"></p>
+    </div>
+
+    <!-- Navigasi dan Skor -->
+    <div class="mt-8 text-center">
+      <p id="skorDisplay" class="text-lg">Skor: 0 / 0</p>
+      <button onclick="mulaiUlang()" class="mt-4 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">🔁 Ulangi Game</button>
+    </div>
+  </div>
+
+  <script src="../firebase/firebase_init.js"></script>
+  <script>
+    const soal = [
+      { gambar: '../img/ayah.png', jawaban: 'أَبٌ', pilihan: ['أَبٌ', 'بَيْتٌ', 'مِفْتَاحٌ', 'كُرْسِيٌّ'] },
+      { gambar: '../img/buku.png', jawaban: 'كِتَابٌ', pilihan: ['كِتَابٌ', 'طَاوِلَةٌ', 'قَلَمٌ', 'سَيَّارَةٌ'] },
+      { gambar: '../img/rumah.png', jawaban: 'بَيْتٌ', pilihan: ['مِفْتَاحٌ', 'بَيْتٌ', 'نَافِذَةٌ', 'جِدَارٌ'] },
+      { gambar: '../img/sekolah.png', jawaban: 'مَدْرَسَةٌ', pilihan: ['مَدْرَسَةٌ', 'سُوقٌ', 'مَسْجِدٌ', 'حَقِيبَةٌ'] },
+      { gambar: '../img/roti.png', jawaban: 'خُبْزٌ', pilihan: ['خُبْزٌ', 'مَاءٌ', 'فَاكِهَةٌ', 'حَلِيبٌ'] }
+    ];
+
+    let indeks = 0;
+    let skor = 0;
+
+    const namaInput = document.getElementById('nama');
+    const gambar = document.getElementById('gambar');
+    const pilihan = document.getElementById('pilihan');
+    const feedback = document.getElementById('feedback');
+    const skorDisplay = document.getElementById('skorDisplay');
+
+    function tampilkanSoal() {
+      if (indeks >= soal.length) {
+        simpanSkor(namaInput.value.trim(), skor);
+        feedback.innerText = `🎉 Selesai! Skor akhir Anda: ${skor} dari ${soal.length}`;
+        return;
+      }
+
+      const s = soal[indeks];
+      gambar.src = s.gambar;
+      feedback.innerText = '';
+      skorDisplay.innerText = `Skor: ${skor} / ${indeks}`;
+
+      pilihan.innerHTML = '';
+      s.pilihan.forEach(p => {
+        const btn = document.createElement('button');
+        btn.innerText = p;
+        btn.className = 'bg-green-200 hover:bg-green-300 px-4 py-2 rounded text-lg shadow';
+        btn.onclick = () => periksaJawaban(p);
+        pilihan.appendChild(btn);
+      });
+    }
+
+    function periksaJawaban(pilihanUser) {
+      const benar = soal[indeks].jawaban === pilihanUser;
+      if (benar) {
+        skor++;
+        feedback.innerText = '✅ Benar!';
+        feedback.className = 'text-green-600 font-bold';
+      } else {
+        feedback.innerText = `❌ Salah! Jawaban benar: ${soal[indeks].jawaban}`;
+        feedback.className = 'text-red-600 font-bold';
+      }
+      indeks++;
+      setTimeout(tampilkanSoal, 1000);
+    }
+
+    function mulaiUlang() {
+      indeks = 0;
+      skor = 0;
+      tampilkanSoal();
+    }
+
+    async function simpanSkor(nama, skor) {
+      if (!nama) return alert('Nama belum diisi!');
+      try {
+        await firebase.firestore().collection("skor_game").add({
+          nama, skor, waktu: new Date().toISOString()
+        });
+      } catch (e) {
+        console.error('Gagal menyimpan skor:', e);
+      }
+    }
+
+    // Mulai saat halaman siap
+    window.onload = tampilkanSoal;
+  </script>
+</body>
+</html>

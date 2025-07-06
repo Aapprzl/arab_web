@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Bahasa Arab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Firebase App (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+
+  <!-- Script kamu -->
+  <script src="../firebase/firebase_init.js"></script>
+  <script type="module" src="../js/kuis.js"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2 { font-family: 'Cairo', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 py-10 px-4">
+  <h1 class="text-2xl sm:text-3xl font-bold text-center mb-6">🧠 Kuis Bahasa Arab - Tema Rumah</h1>
+
+  <div id="quiz-container" class="space-y-4 max-w-xl w-full mx-auto"></div>
+
+  <div id="result" class="hidden text-center mt-10 max-w-md w-full mx-auto">
+    <h2 class="text-lg sm:text-xl font-bold mb-2">Nilai Anda:</h2>
+    <p id="score" class="text-2xl text-green-600 font-bold mb-4">0 / 3</p>
+
+    <label for="name" class="block mb-2 text-sm">Masukkan Nama:</label>
+    <input type="text" id="name" class="border px-3 py-2 rounded w-full max-w-xs mx-auto block mb-4">
+
+    <button onclick="submitScore()" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 w-full sm:w-auto">
+      Simpan Skor
+    </button>
+
+    <div id="leaderboard" class="mt-10 text-left">
+      <h2 class="text-lg sm:text-xl font-bold mb-4">🏆 Leaderboard</h2>
+      <ul id="skor-list" class="space-y-2 text-sm"></ul>
+    </div>
+  </div>
+</body>
+</html>

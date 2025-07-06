@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocokkan Gambar - BelajarArab.ID</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Cairo', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header/Navbar -->
+<header class="bg-green-600 text-white py-4 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+    <h1 class="text-xl sm:text-2xl font-bold">BelajarArab.ID</h1>
+    <button id="nav-toggle" class="sm:hidden text-white focus:outline-none">
+      ☰
+    </button>
+    <nav id="nav-menu" class="hidden sm:flex sm:space-x-4 text-sm sm:text-base flex-col sm:flex-row bg-green-600 sm:bg-transparent mt-4 sm:mt-0 sm:items-center sm:static absolute top-full left-0 w-full sm:w-auto z-50 sm:z-auto">
+      <a href="../index.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Beranda</a>
+      <a href="../materi.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Materi</a>
+      <a href="../komik/komik.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Komik</a>
+      <a href="../video.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Video</a>
+      <a href="../kontak.html" class="block py-2 px-4 hover:bg-green-700 sm:hover:bg-transparent hover:text-yellow-300">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<br>
+
+  <h1 class="text-3xl font-bold text-center mb-6">🖼️ Latihan Cocokkan Gambar</h1>
+  <p class="text-center text-lg mb-4">Cocokkan kata Bahasa Arab dengan gambar yang sesuai!</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+    <!-- Gambar dan pilihan kata -->
+    <div class="text-center">
+      <img src="/assets/gambar/rumah.png" alt="Rumah" class="w-32 mx-auto mb-4">
+      <select id="select1" class="border px-3 py-2 rounded">
+        <option value="">-- Pilih Kata --</option>
+        <option value="البَيْتُ">البَيْتُ</option>
+        <option value="المَدْرَسَةُ">المَدْرَسَةُ</option>
+        <option value="الكِتَابُ">الكِتَابُ</option>
+      </select>
+    </div>
+
+    <div class="text-center">
+      <img src="/assets/gambar/sekolah.png" alt="Sekolah" class="w-32 mx-auto mb-4">
+      <select id="select2" class="border px-3 py-2 rounded">
+        <option value="">-- Pilih Kata --</option>
+        <option value="البَيْتُ">البَيْتُ</option>
+        <option value="المَدْرَسَةُ">المَدْرَسَةُ</option>
+        <option value="الكِتَابُ">الكِتَابُ</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-center mt-6">
+    <button onclick="checkMatch()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Periksa Jawaban</button>
+    <p id="feedback" class="mt-4 text-lg font-semibold"></p>
+  </div>
+
+  <script>
+    function checkMatch() {
+      const select1 = document.getElementById("select1").value;
+      const select2 = document.getElementById("select2").value;
+      if (select1 === "البَيْتُ" && select2 === "المَدْرَسَةُ") {
+        document.getElementById("feedback").textContent = "✅ Benar!";
+      } else {
+        document.getElementById("feedback").textContent = "❌ Coba lagi.";
+      }
+    }
+  </script>
+
+    <script>
+  document.getElementById('nav-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>

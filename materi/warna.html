@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi: Warna</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Cairo', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold text-yellow-700 mb-6 text-center">🎨 Kosakata Tema Warna</h1>
+
+    <!-- Kosakata Warna -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Contoh kosakata warna -->
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَحْمَر</strong> – Merah</p>
+          <button onclick="playAudio('merah')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="merah" src="../audio/merah.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَصْفَر</strong> – Kuning</p>
+          <button onclick="playAudio('kuning')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="kuning" src="../audio/kuning.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَزْرَق</strong> – Biru</p>
+          <button onclick="playAudio('biru')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="biru" src="../audio/biru.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَخْضَر</strong> – Hijau</p>
+          <button onclick="playAudio('hijau')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="hijau" src="../audio/hijau.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَسْوَد</strong> – Hitam</p>
+          <button onclick="playAudio('hitam')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="hitam" src="../audio/hitam.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَبْيَض</strong> – Putih</p>
+          <button onclick="playAudio('putih')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="putih" src="../audio/putih.mp3"></audio>
+      </div>
+
+      <!-- Tambahan warna lainnya -->
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>بُنِّيّ</strong> – Cokelat</p>
+          <button onclick="playAudio('coklat')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="coklat" src="../audio/coklat.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>رَمَادِيّ</strong> – Abu-abu</p>
+          <button onclick="playAudio('abu')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="abu" src="../audio/abu.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>بَنَفْسَجِيّ</strong> – Ungu</p>
+          <button onclick="playAudio('ungu')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="ungu" src="../audio/ungu.mp3"></audio>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
+        <div>
+          <p class="text-xl font-semibold"><strong>ذَهَبِيّ</strong> – Emas</p>
+          <button onclick="playAudio('emas')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="emas" src="../audio/emas.mp3"></audio>
+      </div>
+    </div>
+
+    <!-- Contoh Kalimat -->
+    <div class="mt-10">
+      <h2 class="text-xl font-bold text-yellow-700 mb-4">📝 Contoh Kalimat</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>اللَّوْنُ الْمُفَضَّلُ لَدَيَّ هُوَ الأَزْرَقُ. – Warna favoritku adalah biru.</li>
+        <li>سَيَّارَتِي حَمْرَاءُ. – Mobilku berwarna merah.</li>
+        <li>الْكِتَابُ أَصْفَرُ. – Bukunya berwarna kuning.</li>
+        <li>اللَّوْنُ الأَخْضَرُ يُمَثِّلُ الطَّبِيعَةَ. – Warna hijau melambangkan alam.</li>
+        <li>الْجِدَارُ أَبْيَضُ. – Dinding itu putih.</li>
+        <li>الشَّعْرُ أَسْوَدُ. – Rambut itu hitam.</li>
+        <li>لَدَيْهِ مِعْطَفٌ بُنِّيٌّ. – Dia punya jaket cokelat.</li>
+        <li>الطَّبَقُ بَنَفْسَجِيٌّ. – Piring itu ungu.</li>
+        <li>الْهَاتِفُ رَمَادِيٌّ. – Telepon itu abu-abu.</li>
+        <li>السَّاعَةُ ذَهَبِيَّةٌ. – Jam tangan itu emas.</li>
+      </ul>
+    </div>
+
+    <!-- Dialog Tema Warna -->
+    <div class="mt-10">
+      <h2 class="text-xl font-bold text-yellow-700 mb-4">💬 Dialog Tema Warna</h2>
+      <div class="bg-white rounded-lg p-6 shadow space-y-3 leading-relaxed">
+        <p><strong>يُوسُف:</strong> مَا لَوْنُ قَمِيصِكَ الْيَوْمَ؟</p>
+        <p><strong>سَلْمَى:</strong> قَمِيصِي أَزْرَقُ. وَأَنْتَ؟</p>
+        <p><strong>يُوسُف:</strong> قَمِيصِي أَخْضَرُ، وَأُحِبُّهُ جِدًّا.</p>
+        <p><strong>سَلْمَى:</strong> أَنَا أُفَضِّلُ اللَّوْنَ الْبَنَفْسَجِيَّ.</p>
+        <p><strong>يُوسُف:</strong> لَوْنٌ جَمِيلٌ! مَاذَا عَنْ اللَّوْنِ الْأَسْوَدِ؟</p>
+        <p><strong>سَلْمَى:</strong> لَا أُحِبُّهُ كَثِيرًا، إِنَّهُ غَامِقٌ جِدًّا.</p>
+      </div>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="flex justify-between mt-10">
+      <a href="../materi.html" class="text-yellow-600 hover:underline">⬅️ Kembali ke Materi</a>
+      <a href="../latihan/kuis.html" class="text-blue-600 hover:underline">🚀 Latihan Kuis</a>
+    </div>
+  </div>
+
+  <script>
+    function playAudio(id) {
+      const audio = document.getElementById(id);
+      if (audio) audio.play();
+    }
+  </script>
+</body>
+</html>

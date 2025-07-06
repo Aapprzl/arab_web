@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Video</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <header class="bg-green-600 text-white py-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-xl sm:text-2xl font-bold">BelajarArab.ID</h1>
+      <a href="video.html" class="text-white hover:underline">⬅️ Kembali</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h2 id="judulTema" class="text-2xl font-bold mb-6 text-green-700 text-center">Judul Video</h2>
+
+    <div class="aspect-video bg-black rounded-lg shadow overflow-hidden">
+      <video id="videoPlayer" controls class="w-full h-full bg-black rounded">
+        <source id="videoSource" src="" type="video/mp4">
+        Browser Anda tidak mendukung pemutar video.
+      </video>
+    </div>
+  </main>
+
+  <script>
+    // Ambil parameter "tema" dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const tema = urlParams.get('tema');
+
+    // Judul dan file video sesuai tema
+    const temaInfo = {
+      keluarga: {
+        judul: "👨‍👩‍👧‍👦 Tema: Keluarga",
+        file: "keluarga.mp4"
+      },
+      rumah: {
+        judul: "🏠 Tema: Rumah",
+        file: "rumah.mp4"
+      },
+      sekolah: {
+        judul: "🏫 Tema: Sekolah",
+        file: "sekolah.mp4"
+      },
+      warna: {
+        judul: "🌈 Tema: Warna",
+        file: "warna.mp4"
+      },
+      cuaca: {
+        judul: "⛅ Tema: Cuaca",
+        file: "cuaca.mp4"
+      },
+      makanan: {
+        judul: "🍓 Tema: Makanan",
+        file: "makanan.mp4"
+      }
+    };
+
+    if (tema && temaInfo[tema]) {
+      document.getElementById('judulTema').innerText = temaInfo[tema].judul;
+      document.getElementById('videoSource').src = `video/${temaInfo[tema].file}`;
+      document.getElementById('videoPlayer').load();
+    } else {
+      document.getElementById('judulTema').innerText = "❌ Video tidak ditemukan.";
+      document.getElementById('videoPlayer').style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

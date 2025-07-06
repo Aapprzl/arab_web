@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BelajarArab.ID - Pembelajaran Bahasa Arab MTs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Cairo', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+<header class="bg-green-600 text-white py-4 shadow-md sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+    <h1 class="text-xl sm:text-2xl font-bold">BelajarArab.ID</h1>
+    
+    <!-- Tombol Hamburger -->
+    <button id="menu-toggle" class="sm:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <!-- Menu Desktop -->
+    <nav class="hidden sm:flex space-x-2 sm:space-x-4 text-sm sm:text-base">
+      <a href="index.html" class="hover:text-yellow-300">Beranda</a>
+      <a href="materi.html" class="hover:text-yellow-300">Materi</a>
+      <a href="latihan.html" class="hover:text-yellow-300">Latihan</a>
+      <a href="komik/index.html" class="hover:text-yellow-300">Komik</a>
+      <a href="video.html" class="hover:text-yellow-300">Video</a>
+     </nav>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="sm:hidden hidden px-4 pt-2 pb-4 bg-green-700">
+    <a href="index.html" class="block py-1 hover:text-yellow-300">Beranda</a>
+    <a href="materi.html" class="block py-1 hover:text-yellow-300">Materi</a>
+    <a href="latihan.html" class="block py-1 hover:text-yellow-300">Latihan</a>
+    <a href="komik/index.html" class="block py-1 hover:text-yellow-300">Komik</a>
+    <a href="video.html" class="block py-1 hover:text-yellow-300">Video</a>
+
+  </div>
+</header>
+
+
+  <!-- Jumbotron -->
+  <section class="bg-gradient-to-r from-green-400 to-green-600 text-white py-16 sm:py-20 text-center px-4">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">Selamat Datang di BelajarArab.ID</h2>
+      <p class="text-base sm:text-lg mb-6">Situs pembelajaran Bahasa Arab interaktif untuk siswa MTs kelas 7-9</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="./latihan/kuis1.html" class="bg-white text-green-600 font-semibold px-6 py-3 rounded-full hover:bg-yellow-300 transition w-full sm:w-auto text-center">📚 Mulai Belajar</a>
+        <a href="/jumbotron/tebak_gambar.html" class="bg-yellow-300 text-green-800 font-semibold px-6 py-3 rounded-full hover:bg-white transition w-full sm:w-auto text-center">🎮 Main Game</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Kategori -->
+  <section class="py-16 bg-white px-4">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+      <div class="p-6 bg-green-100 rounded-xl shadow hover:shadow-lg transition duration-200">
+        <h3 class="text-lg sm:text-xl font-bold mb-2">📚 Materi</h3>
+        <p class="text-sm sm:text-base">Belajar kosa kata dan tema sesuai kelas.</p>
+      </div>
+      <div class="p-6 bg-green-100 rounded-xl shadow hover:shadow-lg transition duration-200">
+        <h3 class="text-lg sm:text-xl font-bold mb-2">🧩 Latihan</h3>
+        <p class="text-sm sm:text-base">Kuis, susun kata, cocokkan gambar interaktif.</p>
+      </div>
+      <div class="p-6 bg-green-100 rounded-xl shadow hover:shadow-lg transition duration-200">
+        <h3 class="text-lg sm:text-xl font-bold mb-2">🎞️ Video</h3>
+        <p class="text-sm sm:text-base">Video percakapan Bahasa Arab sederhana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white py-6 mt-10 px-4">
+    <div class="max-w-6xl mx-auto text-center text-sm sm:text-base">
+      <p>© 2025 BelajarArab.ID | Media Pembelajaran Bahasa Arab untuk MTs</p>
+    </div>
+  </footer>
+</body>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</html>
