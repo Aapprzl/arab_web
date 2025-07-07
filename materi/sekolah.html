@@ -11,131 +11,110 @@
     h1, h2, h3 { font-family: 'Cairo', sans-serif; }
   </style>
 </head>
-<body class="bg-indigo-50 text-gray-800">
+<body class="bg-yellow-50 text-gray-800">
 
   <div class="max-w-4xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold text-indigo-700 mb-6 text-center">🏫 Kosakata Tema Sekolah</h1>
+    <h1 class="text-3xl font-bold text-yellow-600 mb-6 text-center">🏫 Kosakata Tema Sekolah</h1>
 
-    <!-- Kosakata -->
+    <!-- Kosakata Sekolah -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <!-- Contoh Kosakata Sekolah -->
       <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
         <div>
           <p class="text-xl font-semibold"><strong>مَدْرَسَةٌ</strong> – Sekolah</p>
-          <button onclick="playAudio('sekolah')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+          <button onclick="playAudio('sekolah')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
         </div>
-        <audio id="sekolah" src="../audio/sekolah.mp3"></audio>
+        <audio id="sekolah" src="../audio/kosakata_sekolah/sekolah.mp3"></audio>
       </div>
 
       <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
         <div>
-          <p class="text-xl font-semibold"><strong>مُعَلِّمٌ</strong> – Guru laki-laki</p>
-          <button onclick="playAudio('guru_lk')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+          <p class="text-xl font-semibold"><strong>فَصْلٌ</strong> – Kelas</p>
+          <button onclick="playAudio('kelas')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
         </div>
-        <audio id="guru_lk" src="../audio/guru_lk.mp3"></audio>
+        <audio id="kelas" src="../audio/kosakata_sekolah/kelas.mp3"></audio>
       </div>
 
       <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
         <div>
-          <p class="text-xl font-semibold"><strong>مُعَلِّمَةٌ</strong> – Guru perempuan</p>
-          <button onclick="playAudio('guru_pr')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+          <p class="text-xl font-semibold"><strong>مُعَلِّمٌ</strong> – Guru (Laki-laki)</p>
+          <button onclick="playAudio('guru_lk')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
         </div>
-        <audio id="guru_pr" src="../audio/guru_pr.mp3"></audio>
+        <audio id="guru_lk" src="../audio/kosakata_sekolah/guru_lk.mp3"></audio>
       </div>
 
       <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
         <div>
-          <p class="text-xl font-semibold"><strong>طَالِبٌ</strong> – Siswa</p>
-          <button onclick="playAudio('siswa')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+          <p class="text-xl font-semibold"><strong>مُعَلِّمَةٌ</strong> – Guru (Perempuan)</p>
+          <button onclick="playAudio('guru_pr')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
         </div>
-        <audio id="siswa" src="../audio/siswa.mp3"></audio>
+        <audio id="guru_pr" src="../audio/kosakata_sekolah/guru_pr.mp3"></audio>
       </div>
 
       <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
         <div>
-          <p class="text-xl font-semibold"><strong>كِتَابٌ</strong> – Buku</p>
-          <button onclick="playAudio('buku')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+          <p class="text-xl font-semibold"><strong>تِلْمِيذٌ</strong> – Murid (Laki-laki)</p>
+          <button onclick="playAudio('murid_lk')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
         </div>
-        <audio id="buku" src="../audio/buku.mp3"></audio>
+        <audio id="murid_lk" src="../audio/kosakata_sekolah/murid_lk.mp3"></audio>
       </div>
 
       <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
         <div>
-          <p class="text-xl font-semibold"><strong>قَلَمٌ</strong> – Pulpen</p>
-          <button onclick="playAudio('pulpen')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+          <p class="text-xl font-semibold"><strong>تِلْمِيذَةٌ</strong> – Murid (Perempuan)</p>
+          <button onclick="playAudio('murid_pr')" class="text-yellow-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
         </div>
-        <audio id="pulpen" src="../audio/pulpen.mp3"></audio>
+        <audio id="murid_pr" src="../audio/kosakata_sekolah/murid_pr.mp3"></audio>
       </div>
-
-      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
-        <div>
-          <p class="text-xl font-semibold"><strong>سَبُّورَةٌ</strong> – Papan tulis</p>
-          <button onclick="playAudio('papan')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-        </div>
-        <audio id="papan" src="../audio/papan.mp3"></audio>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
-        <div>
-          <p class="text-xl font-semibold"><strong>مِمْحَاةٌ</strong> – Penghapus</p>
-          <button onclick="playAudio('penghapus')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-        </div>
-        <audio id="penghapus" src="../audio/penghapus.mp3"></audio>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
-        <div>
-          <p class="text-xl font-semibold"><strong>مَكْتَبٌ</strong> – Meja belajar</p>
-          <button onclick="playAudio('meja')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-        </div>
-        <audio id="meja" src="../audio/meja.mp3"></audio>
-      </div>
-
-      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
-        <div>
-          <p class="text-xl font-semibold"><strong>مِسْطَرَةٌ</strong> – Penggaris</p>
-          <button onclick="playAudio('penggaris')" class="text-indigo-700 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-        </div>
-        <audio id="penggaris" src="../audio/penggaris.mp3"></audio>
-      </div>
-
-      <!-- Tambahkan lagi jika ingin 20 kata -->
     </div>
 
     <!-- Contoh Kalimat -->
     <div class="mt-10">
-      <h2 class="text-xl font-bold text-indigo-700 mb-4">📝 Contoh Kalimat</h2>
-      <ul class="list-disc pl-6 space-y-2">
-        <li>هَذِهِ مَدْرَسَتِي. – Ini sekolahku.</li>
-        <li>الْمُعَلِّمُ فِي الْفَصْلِ. – Guru ada di kelas.</li>
-        <li>الطَّالِبُ يَقْرَأُ الْكِتَابَ. – Siswa membaca buku.</li>
-        <li>عِنْدِي قَلَمٌ أَزْرَقُ. – Saya punya pulpen biru.</li>
-        <li>أَكْتُبُ عَلَى السَّبُّورَةِ. – Saya menulis di papan tulis.</li>
-        <li>أَسْتَخْدِمُ الْمِمْحَاةَ. – Saya menggunakan penghapus.</li>
-        <li>أَجْلِسُ عَلَى الْكُرْسِيِّ. – Saya duduk di kursi.</li>
-        <li>الْمُعَلِّمَةُ تَشْرَحُ الدَّرْسَ. – Guru perempuan menjelaskan pelajaran.</li>
-        <li>فِي حَقِيبَتِي دَفْتَرٌ وَكِتَابٌ. – Di tasku ada buku tulis dan buku bacaan.</li>
-        <li>هَذِهِ الْفَصْلُ كَبِيرَةٌ. – Kelas ini besar.</li>
+      <h2 class="text-xl font-bold text-yellow-600 mb-4 text-right">📝 Contoh Kalimat</h2>
+      <ul class="space-y-4 rtl" dir="rtl">
+        <li class="bg-white p-3 rounded shadow flex items-center justify-between">
+          <div class="text-right">
+            <p class="text-xl font-bold text-gray-800">هَذِهِ مَدْرَسَتِي.</p>
+            <p class="text-sm text-gray-600">Ini sekolahku.</p>
+          </div>
+          <button onclick="playAudio('kalimat1')" class="text-yellow-600 hover:underline text-sm">🔊</button>
+          <audio id="kalimat1" src="../audio/contoh_kalimat_sekolah/kalimat1.mp3"></audio>
+        </li>
+
+        <li class="bg-white p-3 rounded shadow flex items-center justify-between">
+          <div class="text-right">
+            <p class="text-xl font-bold text-gray-800">الْمُعَلِّمُ فِي الْفَصْلِ.</p>
+            <p class="text-sm text-gray-600">Guru ada di kelas.</p>
+          </div>
+          <button onclick="playAudio('kalimat2')" class="text-yellow-600 hover:underline text-sm">🔊</button>
+          <audio id="kalimat2" src="../audio/contoh_kalimat_sekolah/kalimat2.mp3"></audio>
+        </li>
+
+        <li class="bg-white p-3 rounded shadow flex items-center justify-between">
+          <div class="text-right">
+            <p class="text-xl font-bold text-gray-800">أُحِبُّ الْمَدْرَسَةَ كَثِيرًا.</p>
+            <p class="text-sm text-gray-600">Aku sangat menyukai sekolah.</p>
+          </div>
+          <button onclick="playAudio('kalimat3')" class="text-yellow-600 hover:underline text-sm">🔊</button>
+          <audio id="kalimat3" src="../audio/contoh_kalimat_sekolah/kalimat3.mp3"></audio>
+        </li>
       </ul>
     </div>
 
-    <!-- Dialog -->
-    <div class="mt-10">
-      <h2 class="text-xl font-bold text-indigo-700 mb-4">💬 Dialog Tema Sekolah</h2>
-      <div class="bg-white rounded-lg p-6 shadow space-y-3 leading-relaxed">
-        <p><strong>سَلْمَان:</strong> إِلَى أَيْنَ تَذْهَبُ؟</p>
-        <p><strong>عِمْرَان:</strong> أَذْهَبُ إِلَى الْمَدْرَسَةِ.</p>
-        <p><strong>سَلْمَان:</strong> هَلْ أَحْضَرْتَ كِتَابَكَ؟</p>
-        <p><strong>عِمْرَان:</strong> نَعَمْ، مَعِي كِتَابِي وَقَلَمِي.</p>
-        <p><strong>سَلْمَان:</strong> مَنْ هُوَ الْمُعَلِّمُ الْيَوْمَ؟</p>
-        <p><strong>عِمْرَان:</strong> الْمُعَلِّمُ أَحْمَدُ، يُدَرِّسُ اللُّغَةَ الْعَرَبِيَّةَ.</p>
+    <!-- Dialog Tema Sekolah -->
+    <div class="mt-10" dir="rtl">
+      <h2 class="text-xl font-bold text-yellow-600 mb-4 text-right">💬 Dialog Tema Sekolah</h2>
+      <div class="bg-white rounded-lg p-6 shadow space-y-3 leading-relaxed text-right">
+        <p><strong>زَيْنَبُ:</strong> إِلَى أَيْنَ تَذْهَبُ يَا مُحَمَّدُ؟</p>
+        <p><strong>مُحَمَّدٌ:</strong> أَذْهَبُ إِلَى الْمَدْرَسَةِ.</p>
+        <p><strong>زَيْنَبُ:</strong> هَلْ تُحِبُّ الْمَدْرَسَةَ؟</p>
+        <p><strong>مُحَمَّدٌ:</strong> نَعَمْ، أُحِبُّهَا جِدًّا لِأَنَّنِي أَتَعَلَّمُ فِيهَا.</p>
       </div>
     </div>
 
     <!-- Navigasi -->
     <div class="flex justify-between mt-10">
-      <a href="../materi.html" class="text-indigo-700 hover:underline">⬅️ Kembali ke Materi</a>
-      <a href="../latihan/kuis_sekolah.html" class="text-green-700 hover:underline">🚀 Latihan Kuis</a>
+      <a href="../materi.html" class="text-yellow-600 hover:underline">⬅️ Kembali ke Materi</a>
+      <a href="../latihan/susun_kata_sekolah.html" class="text-green-600 hover:underline">🚀 Latihan Susun Kata</a>
     </div>
   </div>
 

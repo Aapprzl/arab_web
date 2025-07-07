@@ -2,255 +2,137 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Materi: Keluarga</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo&family=Poppins&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Poppins&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; }
     h1, h2, h3 { font-family: 'Cairo', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-blue-50 text-gray-800">
 
   <div class="max-w-4xl mx-auto px-4 py-10">
-    <h1 class="text-3xl font-bold text-green-700 mb-6 text-center">👨‍👩‍👧‍👦 Kosakata Tema Keluarga</h1>
+    <h1 class="text-3xl font-bold text-blue-600 mb-6 text-center">👨‍👩‍👧‍👦 Kosakata Tema Keluarga</h1>
 
     <!-- Kosakata -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-  <!-- Kosakata 1 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>أَبٌ</strong> – Ayah</p>
-      <button onclick="playAudio('ayah')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="ayah" src="../audio/ayah.mp3"></audio>
-  </div>
+      <!-- Contoh Kosakata Keluarga -->
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَبٌ</strong> – Ayah</p>
+          <button onclick="playAudio('ayah')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="ayah" src="../assets/audio/kosakata_keluarga/ayah.mp3"></audio>
+      </div>
 
-  <!-- Kosakata 2 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>أُمٌّ</strong> – Ibu</p>
-      <button onclick="playAudio('ibu')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="ibu" src="../audio/ibu.mp3"></audio>
-  </div>
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>أُمٌّ</strong> – Ibu</p>
+          <button onclick="playAudio('ibu')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="ibu" src="../assets/audio/kosakata_keluarga/ibu.mp3"></audio>
+      </div>
 
-  <!-- Kosakata 3 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>أَخٌ</strong> – Saudara laki-laki</p>
-      <button onclick="playAudio('kakak')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="kakak" src="../audio/kakak.mp3"></audio>
-  </div>
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>أَخٌ</strong> – Saudara laki-laki</p>
+          <button onclick="playAudio('saudara_laki')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="saudara_laki" src="../assets/audio/kosakata_keluarga/saudara_laki.mp3"></audio>
+      </div>
 
-  <!-- Kosakata 4 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>أُخْتٌ</strong> – Saudari perempuan</p>
-      <button onclick="playAudio('adik')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="adik" src="../audio/adik.mp3"></audio>
-  </div>
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>أُخْتٌ</strong> – Saudara perempuan</p>
+          <button onclick="playAudio('saudara_perempuan')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="saudara_perempuan" src="../assets/audio/kosakata_keluarga/saudara_perempuan.mp3"></audio>
+      </div>
 
-  <!-- Kosakata 5 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>جَدٌّ</strong> – Kakek</p>
-      <button onclick="playAudio('kakek')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="kakek" src="../audio/kakek.mp3"></audio>
-  </div>
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>جَدٌّ</strong> – Kakek</p>
+          <button onclick="playAudio('kakek')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="kakek" src="../assets/audio/kosakata_keluarga/kakek.mp3"></audio>
+      </div>
 
-  <!-- Kosakata 6 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>جَدَّةٌ</strong> – Nenek</p>
-      <button onclick="playAudio('nenek')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+      <div class="bg-white rounded-xl shadow p-4 flex justify-between items-center">
+        <div>
+          <p class="text-xl font-semibold"><strong>جَدَّةٌ</strong> – Nenek</p>
+          <button onclick="playAudio('nenek')" class="text-blue-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
+        </div>
+        <audio id="nenek" src="../assets/audio/kosakata_keluarga/nenek.mp3"></audio>
+      </div>
     </div>
-    <audio id="nenek" src="../audio/nenek.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 7 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>اِبْنٌ</strong> – Anak laki-laki</p>
-      <button onclick="playAudio('anak_lk')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="anak_lk" src="../audio/anak_lk.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 8 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>بِنْتٌ</strong> – Anak perempuan</p>
-      <button onclick="playAudio('anak_pr')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="anak_pr" src="../audio/anak_pr.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 9 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>زَوْجٌ</strong> – Suami</p>
-      <button onclick="playAudio('suami')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="suami" src="../audio/suami.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 10 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>زَوْجَةٌ</strong> – Istri</p>
-      <button onclick="playAudio('istri')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="istri" src="../audio/istri.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 11 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>عَمٌّ</strong> – Paman (ayah)</p>
-      <button onclick="playAudio('paman_ayah')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="paman_ayah" src="../audio/paman_ayah.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 12 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>عَمَّةٌ</strong> – Bibi (ayah)</p>
-      <button onclick="playAudio('bibi_ayah')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="bibi_ayah" src="../audio/bibi_ayah.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 13 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>خَالٌ</strong> – Paman (ibu)</p>
-      <button onclick="playAudio('paman_ibu')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="paman_ibu" src="../audio/paman_ibu.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 14 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>خَالَةٌ</strong> – Bibi (ibu)</p>
-      <button onclick="playAudio('bibi_ibu')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="bibi_ibu" src="../audio/bibi_ibu.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 15 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>حَفِيدٌ</strong> – Cucu laki-laki</p>
-      <button onclick="playAudio('cucu_lk')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="cucu_lk" src="../audio/cucu_lk.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 16 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>حَفِيدَةٌ</strong> – Cucu perempuan</p>
-      <button onclick="playAudio('cucu_pr')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="cucu_pr" src="../audio/cucu_pr.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 17 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>وَالِدٌ</strong> – Orang tua laki-laki</p>
-      <button onclick="playAudio('ortu_lk')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="ortu_lk" src="../audio/ortu_lk.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 18 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>وَالِدَةٌ</strong> – Orang tua perempuan</p>
-      <button onclick="playAudio('ortu_pr')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="ortu_pr" src="../audio/ortu_pr.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 19 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>أَسْرَةٌ</strong> – Keluarga</p>
-      <button onclick="playAudio('keluarga')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="keluarga" src="../audio/keluarga.mp3"></audio>
-  </div>
-
-  <!-- Kosakata 20 -->
-  <div class="bg-white rounded-xl shadow p-4 flex items-center justify-between">
-    <div>
-      <p class="text-xl font-semibold"><strong>أَوْلَادٌ</strong> – Anak-anak</p>
-      <button onclick="playAudio('anak_anak')" class="text-green-600 hover:underline text-sm mt-1">▶️ Dengarkan</button>
-    </div>
-    <audio id="anak_anak" src="../audio/anak_anak.mp3"></audio>
-  </div>
-</div>
-
 
     <!-- Contoh Kalimat -->
- <div class="mt-10">
-  <h2 class="text-xl font-bold text-green-700 mb-4">📝 Contoh Kalimat</h2>
-  <ul class="list-disc pl-6 space-y-2">
-    <li>أَبِي مُعَلِّمٌ. – Ayahku seorang guru.</li>
-    <li>أُمِّي فِي الْمَطْبَخِ. – Ibuku di dapur.</li>
-    <li>لِي أَخٌ وَاحِدٌ وَأُخْتَانِ. – Aku punya satu saudara laki-laki dan dua saudari perempuan.</li>
-    <li>جَدِّي يَسْكُنُ فِي الْقَرْيَةِ. – Kakekku tinggal di desa.</li>
-    <li>زَوْجِي طَبِيبٌ. – Suamiku seorang dokter.</li>
-    <li>هَذِهِ بِنْتِي. – Ini anak perempuanku.</li>
-    <li>أُحِبُّ أُسْرَتِي كَثِيرًا. – Aku sangat mencintai keluargaku.</li>
-    <li>لَدَيْنَا أُسْرَةٌ كَبِيرَةٌ. – Kami memiliki keluarga besar.</li>
-    <li>جَدَّتِي طَيِّبَةٌ وَرَحِيمَةٌ. – Nenekku baik dan penyayang.</li>
-    <li>نَحْنُ نَذْهَبُ إِلَى بَيْتِ جَدِّي كُلَّ جُمُعَةٍ. – Kami pergi ke rumah kakek setiap hari Jumat.</li>
-  </ul>
-</div>
-
-
-    <!-- Dialog Singkat -->
     <div class="mt-10">
-  <h2 class="text-xl font-bold text-green-700 mb-4">💬 Dialog Tema Keluarga</h2>
-  <div class="bg-white rounded-lg p-6 shadow space-y-3 leading-relaxed">
-    <p><strong>فَاطِمَةُ:</strong> السَّلَامُ عَلَيْكُمْ، يَا عَائِشَةُ!</p>
-    <p><strong>عَائِشَةُ:</strong> وَعَلَيْكِ السَّلَامُ، يَا فَاطِمَةُ. كَيْفَ حَالُكِ؟</p>
-    <p><strong>فَاطِمَةُ:</strong> أَنَا بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. كَيْفَ حَالُ أُسْرَتِكِ؟</p>
-    <p><strong>عَائِشَةُ:</strong> هُمْ بِخَيْرٍ. أَبِي يَعْمَلُ فِي الْمَدْرَسَةِ، وَأُمِّي فِي الْبَيْتِ.</p>
-    <p><strong>فَاطِمَةُ:</strong> كَمْ أَخًا وَأُخْتًا لَكِ؟</p>
-    <p><strong>عَائِشَةُ:</strong> لِي أَخٌ كَبِيرٌ وَأُخْتٌ صَغِيرَةٌ.</p>
-    <p><strong>فَاطِمَةُ:</strong> مَا اسْمُ أَخِيكِ؟</p>
-    <p><strong>عَائِشَةُ:</strong> اسْمُهُ أَحْمَدُ، وَهُوَ فِي السَّنَةِ الثَّانِيَةِ فِي الْجَامِعَةِ.</p>
-    <p><strong>فَاطِمَةُ:</strong> وَمَاذَا تُحِبُّونَ أَنْ تَفْعَلُوا كَأُسْرَةٍ؟</p>
-    <p><strong>عَائِشَةُ:</strong> نُحِبُّ أَنْ نَذْهَبَ إِلَى الْحَدِيقَةِ وَنَأْكُلَ مَعًا.</p>
-    <p><strong>فَاطِمَةُ:</strong> رَائِعٌ! إِنَّهُ شَيْءٌ جَمِيلٌ جِدًّا.</p>
-  </div>
-</div>
+      <h2 class="text-xl font-bold text-blue-600 mb-4 text-right">📝 Contoh Kalimat</h2>
+      <ul class="space-y-4 rtl" dir="rtl">
+        <!-- Kalimat 1 -->
+        <li class="bg-white p-3 rounded shadow flex items-center justify-between">
+          <div class="text-right">
+            <p class="text-xl font-bold text-gray-800">هَذَا أَبِي.</p>
+            <p class="text-sm text-gray-600">Ini ayahku.</p>
+          </div>
+          <button onclick="playAudio('kalimat1')" class="text-blue-600 hover:underline text-sm">🔊</button>
+          <audio id="kalimat1" src="../audio/contoh_kalimat_keluarga/ayah.mp3"></audio>
+        </li>
 
+        <!-- Kalimat 2 -->
+        <li class="bg-white p-3 rounded shadow flex items-center justify-between">
+          <div class="text-right">
+            <p class="text-xl font-bold text-gray-800">أُمِّي تُحِبُّ الطَّبْخَ.</p>
+            <p class="text-sm text-gray-600">Ibuku suka memasak.</p>
+          </div>
+          <button onclick="playAudio('kalimat2')" class="text-blue-600 hover:underline text-sm">🔊</button>
+          <audio id="kalimat2" src="../audio/contoh_kalimat_keluarga/ibu.mp3"></audio>
+        </li>
+
+        <!-- Kalimat 3 -->
+        <li class="bg-white p-3 rounded shadow flex items-center justify-between">
+          <div class="text-right">
+            <p class="text-xl font-bold text-gray-800">لِي أَخٌ وَأُخْتٌ.</p>
+            <p class="text-sm text-gray-600">Saya punya saudara laki-laki dan perempuan.</p>
+          </div>
+          <button onclick="playAudio('kalimat3')" class="text-blue-600 hover:underline text-sm">🔊</button>
+          <audio id="kalimat3" src="../audio/contoh_kalimat_keluarga/saudara.mp3"></audio>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Dialog -->
+    <div class="mt-10" dir="rtl">
+      <h2 class="text-xl font-bold text-blue-600 mb-4 text-right">💬 Dialog Tema Keluarga</h2>
+      <div class="bg-white rounded-lg p-6 shadow space-y-3 leading-relaxed text-right">
+        <p><strong>فَاطِمَةُ:</strong> كَمْ أَفْرَادًا فِي عَائِلَتِكِ؟</p>
+        <p><strong>مَرْيَمُ:</strong> فِي عَائِلَتِي سِتَّةُ أَفْرَادٍ.</p>
+        <p><strong>فَاطِمَةُ:</strong> مَنْ هُمْ؟</p>
+        <p><strong>مَرْيَمُ:</strong> أَبِي، أُمِّي، أَخِي، أُخْتِي، جَدِّي، وَجَدَّتِي.</p>
+        <p><strong>فَاطِمَةُ:</strong> هَلْ تُحِبِّينَ عَائِلَتَكِ؟</p>
+        <p><strong>مَرْيَمُ:</strong> نَعَمْ، أُحِبُّهُمْ كَثِيرًا.</p>
+      </div>
+    </div>
 
     <!-- Navigasi -->
     <div class="flex justify-between mt-10">
-      <a href="../materi.html" class="text-green-600 hover:underline">⬅️ Kembali ke Materi</a>
-      <a href="../latihan/susun_kata.html" class="text-blue-600 hover:underline">🚀 Latihan Susun Kata</a>
+      <a href="../materi.html" class="text-blue-600 hover:underline">⬅️ Kembali ke Materi</a>
+      <a href="../latihan/susun_kata_keluarga.html" class="text-green-600 hover:underline">🚀 Latihan Susun Kata</a>
     </div>
   </div>
 
- <script>
-  function playAudio(id) {
-    const audio = document.getElementById(id);
-    if (audio) {
-      audio.play();
+  <script>
+    function playAudio(id) {
+      const audio = document.getElementById(id);
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.play();
+      }
     }
-  }
-</script>
+  </script>
 </body>
 </html>
